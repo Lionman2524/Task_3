@@ -1,0 +1,13 @@
+Here's how each component works:
+Providers
+- Provider Block configures the credentials and region for Terraform to interact with GCP to authenticate and make API calls.
+Resources
+- Network Resources define the VPC and subnetworks in specified regions. They create network environments, define IP address ranges, and managing how resources communicate.
+- Compute Instance provisions VMs. They define machine type, associated network and subnetwork, boot disk image, and startup scripts.
+- VPN Gateway and Peering Resources manage the connectivity between networks within the same region or across regions. VPN gateways secure connections and network peering allows networks to communicate.
+- Firewall Rules control traffic into and out of your VMs. They’re configured to restrict traffic to specific ports and IP range for security.
+- Startup Script is executed when the compute instance boots up. It updates the system, installs Apache, and sets up a static HTML page with images. It ensures the web server starts every time the instance reboots and deploys the website automatically.
+Variables
+- Let me to parameterize configurations like project IDs, regions, machine types, and image IDs. This makes configurations reusable and adaptable without hardcoding values.
+Outputs
+- These display information about the resources the deployment is completed, like IP addresses, URLs for applications, or useful metadata.
